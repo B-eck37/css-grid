@@ -1,0 +1,27 @@
+* {
+    box-shadow: border-box;
+}
+
+.grid div {
+    order: 2; /* applie order to all items that don't have another order specified */
+    background-color: aqua;
+    border: solid .1em purple;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Repeat Notation */
+    /* auto-fill is similar but may leave gaps by adding additional tracks */
+    /* grid-column-gap: 5em; */
+    grid-gap: 2em;
+    /* grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: row; */
+
+}
+
+.grid div:nth-child(2){
+    order: 1 /* applies the order to the specific element */
+}
